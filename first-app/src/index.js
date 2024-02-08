@@ -6,15 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import Welcome from "./Welcome";
 import Addition from "./Addition";
 import { List, Heading } from "./List";
+import Welcome2 from "./welcome2";
+import Counter from "./Counter";
+import ChangeImage from "./ChangeImage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App />
     <Welcome />
-    <Addition />
     <Heading />
     <List />
+    */}
+    <Welcome2 />
+    <Counter />
+    <Addition />
+    <ChangeImage />
   </React.StrictMode>
 );
 

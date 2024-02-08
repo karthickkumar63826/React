@@ -7,7 +7,7 @@ const Heading = () => {
 };
 
 const List = () => {
-  let names = ["Vijay", "Ajith", "Suriya", "Ranjni", "Kamal"];
+  let names = ["Vijay", "Ajith", "Suriya", "Rajini", "Kamal"];
 
   return (
     <>
