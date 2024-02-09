@@ -9,6 +9,7 @@ import { List, Heading } from "./List";
 import Welcome2 from "./welcome2";
 import Counter from "./Counter";
 import ChangeImage from "./ChangeImage";
+import Toggle from "./OnOff";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
     <Counter />
     <Addition />
     <ChangeImage />
+    <Toggle />
   </React.StrictMode>
 );
 

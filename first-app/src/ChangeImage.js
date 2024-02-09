@@ -11,8 +11,8 @@ function ChangeImage() {
       <img
         src="./images/img1.jpg"
         alt="image"
-        height="140px"
-        width="140px"
+        height="400px"
+        width="400px"
         onClick={(event) => change(event)}
       ></img>
     </>
