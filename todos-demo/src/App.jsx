@@ -4,6 +4,8 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
 
 function App() {
   let [todos, setTodos] = useState([]); // array of todos
@@ -64,41 +66,46 @@ function App() {
   };
   return (
     <div className="App">
+      <div className="form">
+      <div className="Task">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="task"> Enter your Task </label>
-
         <input
           type="text"
           id="task"
+          placeholder="Please enter your task"
+          className="input-box"
           value={todoInput}
           onChange={(e) => {
             setTodoInput(e.target.value);
           }}
         />
       </form>
+      </div>
 
-      <br />
+      <div className="Task-list">
 
-      {todos.length < 1 ? (
+      {/* {todos.length < 1 ? (
         "You have no task to completed"
       ) : (
         <b>You have {todos.length} task to complete</b>
-      )}
+      )} */}
 
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id} style={{ listStyle: "none" }}>
-            <input type="checkbox" onChange={() => updatecompleted(todo)} />
-            {todo.completed ? <del>{todo.text}</del> : todo.text}{" "}
-            <button onClick={() => deleteTodo(todo.id)}>
-              <FaRegTrashCan />
-            </button>
-            <button onClick={() => updatedTodo(todo)}>
+          <li key={todo.id}>
+            <input type="checkbox"  onChange={() => updatecompleted(todo)} />
+            <p className="task-list">{todo.completed ? <del>{todo.text}</del> : todo.text}</p>{" "}
+            <Button onClick={() => deleteTodo(todo.id)} variant="secondary">
+              <FaRegTrashCan color="black" />
+            </Button>{" "}
+            <Button onClick={() => updatedTodo(todo)} variant="danger">
               <FaEdit />
-            </button>
+            </Button>
           </li>
         ))}
       </ul>
+    </div>
+      </div>
     </div>
   );
 }
