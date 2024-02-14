@@ -13,6 +13,7 @@ import Toggle from "./OnOff";
 import ColorChange from "./ColorChange";
 import EvenOrOdd from "./Number";
 import Favfood from "./Foods";
+import ColorTemplate from "./ColorChange2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,15 +22,16 @@ root.render(
     <Welcome />
     <Heading />
     <List />
-    */}
-    {/* <Welcome2 />
+    <Welcome2 />
     <Counter />
     <Addition />
     <ChangeImage />
-    <Toggle /> */}
+    <Toggle />
     <ColorChange />
     <EvenOrOdd />
-    <Favfood />
+    <Favfood /> */}
+
+    <ColorTemplate />
   </React.StrictMode>
 );
 
