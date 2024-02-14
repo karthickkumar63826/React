@@ -10,6 +10,9 @@ import Welcome2 from "./welcome2";
 import Counter from "./Counter";
 import ChangeImage from "./ChangeImage";
 import Toggle from "./OnOff";
+import ColorChange from "./ColorChange";
+import EvenOrOdd from "./Number";
+import Favfood from "./Foods";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,11 +22,14 @@ root.render(
     <Heading />
     <List />
     */}
-    <Welcome2 />
+    {/* <Welcome2 />
     <Counter />
     <Addition />
     <ChangeImage />
-    <Toggle />
+    <Toggle /> */}
+    <ColorChange />
+    <EvenOrOdd />
+    <Favfood />
   </React.StrictMode>
 );
 
