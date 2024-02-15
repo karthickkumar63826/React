@@ -1,40 +1,37 @@
 import { useState } from "react";
 
 function Favfood() {
-  let foods = [
-    "Idly",
-    "Dosa",
-    "Poori",
-    "Chapathi",
-    "Biriyani",
-    "Chicken rice",
-    "Naan",
-  ];
-  let [favFood, setFavFood] = useState([]);
-
-  const addFavFood = (e) => {
-    favFood.push(e.target.value);
-    setFavFood([...favFood]);
-    console.log(favFood);
+  const favitems = ["sambhar", "dosai", "idly", "puttu"];
+  const addfavfood = (e) => {
+    // console.log(favfood)
+    // console.log(e.target.value)
+    // favfood.push(e.target.value);
+    // console.log(favfood)
+    // setfavfood([...favfood]);
+    if (e.target.checked) {
+      favfood.push(e.target.value);
+    } else {
+      favfood = favfood.filter((ff) => ff != e.target.value);
+      console.log(favfood);
+    }
+    setfavfood([...favfood]);
   };
 
   return (
     <>
-      <h1>List of Foods verities</h1>
-      {foods.map((food) => (
-        <div>
-          <input
-            type="checkbox"
-            value={food}
-            onChange={(e) => addFavFood(e)}
-          ></input>
-          {food}
-        </div>
-      ))}
-      <h1>Favourite Food List</h1>
-      {favFood.map((food) => {
-        <p>{food}</p>;
-      })}
+      <div>
+        {favitems.map((f) => (
+          <div>
+            <input type="checkbox" value={f} onClick={(e) => addfavfood(e)} />
+            {f}
+          </div>
+        ))}
+        <b> your favorite items </b>
+        {/* {JSON.stringify(favfood)} */}
+        {favfood.length > 0
+          ? favfood.map((f) => <div> {f}</div>)
+          : "not selected any items "}
+      </div>
     </>
   );
 }
