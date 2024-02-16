@@ -3,6 +3,8 @@ import "./App.css";
 import Child from "./child";
 import Box from "./box";
 import ProductCard from "./productCard";
+import Search from "./search";
+import { useState } from "react";
 
 function App() {
   let products = [
@@ -60,6 +62,19 @@ function App() {
     },
   ];
 
+  let [filtered, setFiltered] = useState(products);
+
+  const handleSearch = (searchTerm) => {
+    if (searchTerm === "" || searchTerm === undefined) {
+      setFiltered(products);
+    } else {
+      const filteredProduct = filtered.filter((f) =>
+        f.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFiltered(filteredProduct);
+    }
+  };
+
   return (
     <>
       {/* <Child name="Karthick" age="22"></Child>
@@ -69,13 +84,14 @@ function App() {
       <Box color="yellow" text="Box 3"></Box> 
       <ProductCard product = {product}></ProductCard>*/}
 
+      <Search onSearch={handleSearch}></Search>
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center ",
         }}
       >
-        {products.map((product) => {
+        {filtered.map((product) => {
           return <ProductCard key={product.id} product={product}></ProductCard>;
         })}
       </div>
