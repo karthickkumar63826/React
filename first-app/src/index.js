@@ -29,9 +29,8 @@ root.render(
     <Toggle />
     <ColorChange />
     <EvenOrOdd />
-    <Favfood /> */}
-
-    <ColorTemplate />
+    <ColorTemplate /> */}
+    <Favfood />
   </React.StrictMode>
 );
 

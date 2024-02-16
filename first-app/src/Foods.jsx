@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Favfood() {
+  let [favfood, setfavfood] = useState([]);
   const favitems = ["sambhar", "dosai", "idly", "puttu"];
   const addfavfood = (e) => {
     // console.log(favfood)
