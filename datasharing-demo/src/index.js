@@ -5,12 +5,21 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Users from "./users";
+import FetchProduct from "./UseEffects/fetchProduct";
+import UseRefDemo from "./useRef/UseRefDemo";
+import UseRefDemo2 from "./useRef/UseRefDemo2";
+import UseRefDemo3 from "./useRef/UseRefDemo3";
+import UseRefDemo4 from "./useRef/UseRefDemo4";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Users />
+    {/* <Users /> */}
+    {/* <FetchProduct /> */}
+    {/* <UseRefDemo/> */}
+    {/* <UseRefDemo2 /> */}
+    <UseRefDemo4 />
   </React.StrictMode>
 );
 
