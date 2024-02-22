@@ -10,6 +10,8 @@ import UseRefDemo from "./useRef/UseRefDemo";
 import UseRefDemo2 from "./useRef/UseRefDemo2";
 import UseRefDemo3 from "./useRef/UseRefDemo3";
 import UseRefDemo4 from "./useRef/UseRefDemo4";
+import TourAPI from "./UseEffects/TourAPI";
+import BookForm from "./FormDemo/BookForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +21,9 @@ root.render(
     {/* <FetchProduct /> */}
     {/* <UseRefDemo/> */}
     {/* <UseRefDemo2 /> */}
-    <UseRefDemo4 />
+    {/* <UseRefDemo4 /> */}
+    {/* <TourAPI/> */}
+    <BookForm/>
   </React.StrictMode>
 );
 

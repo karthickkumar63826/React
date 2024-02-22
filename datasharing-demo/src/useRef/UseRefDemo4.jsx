@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function UseRefDemo4() {
   let imgRef = useRef();
@@ -6,15 +6,24 @@ export default function UseRefDemo4() {
 
   let [count, setCount] = useState(0);
 
+  useEffect(() => {
+    console.log(imgRef.current.width + ","+ imgRef.current.height);
+  }, [count])
+
   function handleImage() {
     imgRef.current.width = imgRef.current.width + 100;
     imgRef.current.height = imgRef.current.height + 100;
-    count++;
+    count = count + 1;
+    setCount(count);
 
     if (count > 5) {
-      imgRef.current.width = imgRef.current.width - 100;
-      imgRef.current.height = imgRef.current.height - 100;
+      decreaseSize();
     }
+  }
+
+  function decreaseSize() {
+    imgRef.current.width = imgRef.current.width - 100;
+    imgRef.current.height = imgRef.current.height - 100;
   }
 
   function handlePara() {
