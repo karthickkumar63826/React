@@ -22,8 +22,8 @@ root.render(
     {/* <UseRefDemo/> */}
     {/* <UseRefDemo2 /> */}
     {/* <UseRefDemo4 /> */}
-    {/* <TourAPI/> */}
-    <BookForm/>
+    <TourAPI/>
+    {/* <BookForm/> */}
   </React.StrictMode>
 );
 

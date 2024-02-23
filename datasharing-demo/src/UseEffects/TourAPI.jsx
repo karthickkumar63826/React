@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TourCard from "./TourCard";
 
 export default function TourAPI() {
-  let [citys, setCitys] = useState([]);
+  let [cities, setcities] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -11,7 +11,7 @@ export default function TourAPI() {
       );
       const data = await response.json();
       console.log(data);
-      setCitys(data);
+      setcities(data);
     } catch (error) {
       console.log(error);
     }
@@ -19,13 +19,18 @@ export default function TourAPI() {
 
   useEffect(() => {
     fetchData();
-  }, [citys]);
+  }, [cities]);
 
+  const removeSelected = (id) => {
+    setcities(cities.filter((city) => city.id !== id));
+  };
   return (
     <>
       <div style={{ display: "flex", gap: "10px" }}>
-        {citys.length > 0
-          ? citys.map((city) => <TourCard key={city.id} city={city} />)
+        {cities.length > 0
+          ? cities.map((city) => (
+              <TourCard key={city.id} city={city} remove={removeSelected} />
+            ))
           : "No data found"}
       </div>
     </>
