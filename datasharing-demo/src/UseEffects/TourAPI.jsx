@@ -22,11 +22,20 @@ export default function TourAPI() {
   }, [cities]);
 
   const removeSelected = (id) => {
-    setcities(cities.filter((city) => city.id !== id));
+    const filteredCities = cities.filter((city) => city.id !== id);
+    setcities(filteredCities);
   };
   return (
     <>
-      <div style={{ display: "flex", gap: "10px" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginTop: "20px",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+        }}
+      >
         {cities.length > 0
           ? cities.map((city) => (
               <TourCard key={city.id} city={city} remove={removeSelected} />

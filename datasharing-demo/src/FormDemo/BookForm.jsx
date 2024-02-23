@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function BookForm() {
-  const initialValue = { title: "", price: "", author: "" };
+  const initialValue = { id: "", title: "", price: "", author: "" };
   let [book, setBook] = useState(initialValue);
   let [books, setBooks] = useState([]);
+  let [isEditable, setIsEditable] = useState(false);
 
   const handleChange = (e) => {
     // const name = e.target.name;
@@ -15,13 +17,39 @@ export default function BookForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    books.push(book);
-    setBooks([...books]);
-    console.log(book);
+    if (!isEditable) {
+      book.id = uuidv4();
+      books.push(book);
+      setBooks([...books]);
+      console.log(book);
+    } else {
+      books.map((b) => {
+        if (b.id === book.id) {
+          b.title = book.title;
+          b.price = book.price;
+          b.author = book.author;
+          return b;
+        } else return b;
+      });
+
+      setBooks([...books]);
+      setIsEditable(false);
+    }
+    setBook(initialValue);
   };
 
   const handleReset = () => {
     setBook(initialValue);
+  };
+
+  const removeBook = (id) => {
+    let filteredBooks = books.filter((book) => book.id !== id);
+    setBooks(filteredBooks);
+  };
+
+  const handleEdit = (b) => {
+    setBook(b);
+    setIsEditable(true);
   };
 
   return (
@@ -59,15 +87,23 @@ export default function BookForm() {
 
       <table className="tabel tabel-bordered">
         <tr>
+          <th>Id</th>
           <th>Title</th>
           <th>Price</th>
           <th>Author</th>
         </tr>
         {books.map((b) => (
-          <tr>
+          <tr key={b.id}>
+            <td>{b.id}</td>
             <td>{b.title}</td>
             <td>{b.price}</td>
             <td>{b.author}</td>
+            <td>
+              <button onClick={() => removeBook(b.id)}>Delete</button>
+            </td>
+            <td>
+              <button onClick={() => handleEdit(b)}>Edit</button>
+            </td>
           </tr>
         ))}
       </table>
