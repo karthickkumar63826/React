@@ -5,6 +5,8 @@ import Box from "./box";
 import ProductCard from "./productCard";
 import Search from "./search";
 import { useState } from "react";
+import { ThemeProvider}  from "./UseContext/ThemeProvider";
+import  Content  from "./UseContext/Content";
 
 function App() {
   let products = [
@@ -84,7 +86,7 @@ function App() {
       <Box color="yellow" text="Box 3"></Box> 
       <ProductCard product = {product}></ProductCard>*/}
 
-      <Search onSearch={handleSearch}></Search>
+      {/* <Search onSearch={handleSearch}></Search>
       <div
         style={{
           display: "flex",
@@ -94,7 +96,10 @@ function App() {
         {filtered.map((product) => {
           return <ProductCard key={product.id} product={product}></ProductCard>;
         })}
-      </div>
+      </div> */}
+      <ThemeProvider>
+        <Content></Content>
+      </ThemeProvider>
     </>
   );
 }

@@ -12,18 +12,32 @@ import UseRefDemo3 from "./useRef/UseRefDemo3";
 import UseRefDemo4 from "./useRef/UseRefDemo4";
 import TourAPI from "./UseEffects/TourAPI";
 import BookForm from "./FormDemo/BookForm";
+import WrapperComponent from "./WrapperComponent";
+import CounterReducer from "./UseReducer/CounterReducer";
+import BankBalance from "./UseReducer/BankBalanace";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Users /> */}
     {/* <FetchProduct /> */}
     {/* <UseRefDemo/> */}
     {/* <UseRefDemo2 /> */}
     {/* <UseRefDemo4 /> */}
     {/* <TourAPI/> */}
-    <BookForm />
+    {/* <BookForm /> */}
+    {/* <WrapperComponent title="Section1">
+      <p>This is message from section 1</p>
+      <button>Click me</button>
+    </WrapperComponent>
+
+    <WrapperComponent title="Section2">
+      <p>This is message from section 2</p>
+      <a href="#">Click me </a>
+    </WrapperComponent> */}
+    {/* <CounterReducer/> */}
+    {/* <BankBalance/> */}
   </React.StrictMode>
 );
 
