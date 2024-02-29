@@ -7,6 +7,7 @@ import Search from "./search";
 import { useState } from "react";
 import { ThemeProvider}  from "./UseContext/ThemeProvider";
 import  Content  from "./UseContext/Content";
+import ConditionalRenderingDemo from "./ConditionalRendering/ConditionalRenderingDemo";
 
 function App() {
   let products = [
@@ -100,6 +101,7 @@ function App() {
       <ThemeProvider>
         <Content></Content>
       </ThemeProvider>
+      <ConditionalRenderingDemo/>
     </>
   );
 }
