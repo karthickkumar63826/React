@@ -11,6 +11,10 @@ import ConditionalRenderingDemo from "./ConditionalRendering/ConditionalRenderin
 import { AuthProvider } from "./UseContext/example2/AuthContext";
 import Logout from "./UseContext/example2/Logout";
 import Login from "./UseContext/example2/Login";
+import MemoDemo from "./UseMemo/MemoDemo";
+import MemoDemo2 from "./UseMemo/MemoDemo2";
+import MemoDemo3 from "./UseMemo/MemoDemo3";
+import MemoDemo4 from "./UseMemo/MemoDemo4";
 
 function App() {
   let products = [
@@ -106,13 +110,17 @@ function App() {
       </ThemeProvider>
       <ConditionalRenderingDemo/> */}
 
-      <AuthProvider>
+      {/* <AuthProvider>
         <div>
           <h1>Authentication Example</h1>
           <Login />
           <Logout />
         </div>
-      </AuthProvider>
+      </AuthProvider> */}
+      {/* <MemoDemo/> */}
+      {/* <MemoDemo2 /> */}
+      {/* <MemoDemo3/> */}
+      <MemoDemo4/>
     </>
   );
 }
