@@ -5,9 +5,12 @@ import Box from "./box";
 import ProductCard from "./productCard";
 import Search from "./search";
 import { useState } from "react";
-import { ThemeProvider}  from "./UseContext/ThemeProvider";
-import  Content  from "./UseContext/Content";
+import { ThemeProvider } from "./UseContext/ThemeProvider";
+import Content from "./UseContext/Content";
 import ConditionalRenderingDemo from "./ConditionalRendering/ConditionalRenderingDemo";
+import { AuthProvider } from "./UseContext/example2/AuthContext";
+import Logout from "./UseContext/example2/Logout";
+import Login from "./UseContext/example2/Login";
 
 function App() {
   let products = [
@@ -98,10 +101,18 @@ function App() {
           return <ProductCard key={product.id} product={product}></ProductCard>;
         })}
       </div> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <Content></Content>
       </ThemeProvider>
-      <ConditionalRenderingDemo/>
+      <ConditionalRenderingDemo/> */}
+
+      <AuthProvider>
+        <div>
+          <h1>Authentication Example</h1>
+          <Login />
+          <Logout />
+        </div>
+      </AuthProvider>
     </>
   );
 }
