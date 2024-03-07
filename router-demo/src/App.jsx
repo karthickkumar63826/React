@@ -67,28 +67,30 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Layout></Layout>}>
-          <Route
-            path="/home"
-            element={user ? <Home name={user.username}></Home> : <Home></Home>}
-          ></Route>
-          <Route path="/aboutUs" element={<AboutUs></AboutUs>}></Route>
-          <Route
-            path="/services"
-            element={<Services services={services}></Services>}
-          ></Route>
-          <Route
-            path="/login"
-            element={<Login handleLogin={handleLogin}></Login>}
-          ></Route>
-          <Route
-            path="/logout"
-            element={<Logout handleLogout={handleLogout}></Logout>}
-          ></Route>
-          <Route path="/products" element={<Products></Products>}></Route>
-          <Route
-            path="/product/:productid"
-            element={<Product></Product>}
-          ></Route>
+            <Route
+              path="/home"
+              element={
+                user ? <Home name={user.username}></Home> : <Home></Home>
+              }
+            ></Route>
+            <Route path="/aboutUs" element={<AboutUs></AboutUs>}></Route>
+            <Route
+              path="/services"
+              element={<Services services={services}></Services>}
+            ></Route>
+            <Route
+              path="/login"
+              element={<Login handleLogin={handleLogin}></Login>}
+            ></Route>
+            <Route
+              path="/logout"
+              element={<Logout handleLogout={handleLogout}></Logout>}
+            ></Route>
+            <Route path="/products" element={<Products></Products>}></Route>
+            <Route
+              path="/product/:productid"
+              element={<Product></Product>}
+            ></Route>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -15,11 +15,12 @@ import BookForm from "./FormDemo/BookForm";
 import WrapperComponent from "./WrapperComponent";
 import CounterReducer from "./UseReducer/CounterReducer";
 import BankBalance from "./UseReducer/BankBalanace";
+import Sorting from "./Sorting/Sorting";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <Users /> */}
     {/* <FetchProduct /> */}
     {/* <UseRefDemo/> */}
@@ -38,6 +39,7 @@ root.render(
     </WrapperComponent> */}
     {/* <CounterReducer/> */}
     {/* <BankBalance/> */}
+    <Sorting />
   </React.StrictMode>
 );
 

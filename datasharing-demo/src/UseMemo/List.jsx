@@ -5,7 +5,7 @@ export default function List(getMultiples){
     let [multiples, setMultiples] = useState([]);
 
     useEffect(() => {
-        setMultiples(getMultiples());
+        setMultiples(getMultiples);
     },[getMultiples])
     return (
         <>
