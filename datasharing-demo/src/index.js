@@ -16,6 +16,7 @@ import WrapperComponent from "./WrapperComponent";
 import CounterReducer from "./UseReducer/CounterReducer";
 import BankBalance from "./UseReducer/BankBalanace";
 import Sorting from "./Sorting/Sorting";
+import Category from "./Category/Category";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,7 +40,8 @@ root.render(
     </WrapperComponent> */}
     {/* <CounterReducer/> */}
     {/* <BankBalance/> */}
-    <Sorting />
+    {/* <Sorting /> */}
+    <Category />
   </React.StrictMode>
 );
 

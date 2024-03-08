@@ -15,6 +15,7 @@ import MemoDemo from "./UseMemo/MemoDemo";
 import MemoDemo2 from "./UseMemo/MemoDemo2";
 import MemoDemo3 from "./UseMemo/MemoDemo3";
 import MemoDemo4 from "./UseMemo/MemoDemo4";
+import Category from "./Category/Category";
 
 function App() {
   let products = [
@@ -120,7 +121,8 @@ function App() {
       {/* <MemoDemo/> */}
       {/* <MemoDemo2 /> */}
       {/* <MemoDemo3/> */}
-      <MemoDemo4/>
+      {/* <MemoDemo4/> */}
+      
     </>
   );
 }

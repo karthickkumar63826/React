@@ -10,6 +10,9 @@ class ClassBasedComponents extends Component {
     console.log("componenet is mounted");
   }
 
+  componentDidUpdate() {
+    console.log("component state is updated");
+  }
   render() {
     return (
       <>
