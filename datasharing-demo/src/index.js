@@ -21,7 +21,7 @@ import Category from "./Category/Category";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Users /> */}
     {/* <FetchProduct /> */}
     {/* <UseRefDemo/> */}
@@ -41,7 +41,7 @@ root.render(
     {/* <CounterReducer/> */}
     {/* <BankBalance/> */}
     {/* <Sorting /> */}
-    <Category />
+    {/* <Category /> */}
   </React.StrictMode>
 );
 

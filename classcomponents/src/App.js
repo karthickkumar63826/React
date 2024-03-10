@@ -7,9 +7,9 @@ import TimerClass from "./ClassComponents/TimerClass";
 function App() {
   return (
     <div className="App">
-      {/* <ClassBasedComponents></ClassBasedComponents> */}
-      {/* <ClassIncrement/> */}
-      <TimerClass />
+      <ClassBasedComponents></ClassBasedComponents>
+      {/* <ClassIncrement /> */}
+      {/* <TimerClass /> */}
     </div>
   );
 }

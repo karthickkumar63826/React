@@ -10,7 +10,7 @@ class TimerClass extends React.Component {
   componentDidMount() {
     console.log("component is mounted");
     this.timeId = setInterval(() => 
-    .setState({ time: new Date() }), 1000);
+    this.setState({ time: new Date() }), 1000);
   }
 
   componentWillUnmount() {

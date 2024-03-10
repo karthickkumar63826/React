@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import MemoDemo2 from "./MemoDemo2";
+
+
 function expensivseCalculation(num) {
   for (let i = 0; i < 1000000; i += 50) {}
   return num * 2;
