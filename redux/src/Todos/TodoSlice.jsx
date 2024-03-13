@@ -25,19 +25,29 @@ export const TodoSlice = createSlice({
     },
 
     toggleComplete: (state, action) => {
-      console.log(action.payload);
       state.todos = state.todos.map((todo) => {
-        if (todo.id === action.payload.id) {
+        if (todo.id == action.payload.id) {
           todo.complete = !todo.complete;
           return todo;
         } else return todo;
       });
-      console.log(state.todos);
     },
 
-    
+    editTodo: (state, action) => {
+      console.log(action.payload.todo);
+      console.log(action.payload.text)
+      state.todos = state.todos.map((todo) => {
+        if (todo.id == action.payload.todo.id) {
+          todo.title = action.payload.text;
+          return todo;
+        } else {
+          return todo;
+        }
+      });
+    },
   },
 });
 
-export const { addTodo, deleteTodo, toggleComplete } = TodoSlice.actions;
+export const { addTodo, deleteTodo, toggleComplete, editTodo } =
+  TodoSlice.actions;
 export default TodoSlice.reducer;

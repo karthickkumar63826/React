@@ -1,18 +1,32 @@
 import React from "react";
 import { useState } from "react";
-import { addTodo, deleteTodo, toggleComplete } from "./TodoSlice";
+import { addTodo, deleteTodo, toggleComplete, editTodo } from "./TodoSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function TodoComponent() {
   let [text, setText] = useState("");
+  let [isEditable, setIsEditable] = useState(false);
+  let [todo, setTodo] = useState({});
 
   let dispatch = useDispatch();
   const data = useSelector((state) => state.todo);
 
+  const handleEdit = (t) => {
+    setText(t.title);
+    setTodo(t);
+    setIsEditable(true);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo(text));
-    setText("");
+    if (!isEditable) {
+      dispatch(addTodo(text));
+      setText("");
+    } else {
+      dispatch(editTodo({todo, text}));
+      setIsEditable(false);
+      setText(" ");
+    }
   };
 
   return (
@@ -32,14 +46,15 @@ export default function TodoComponent() {
         <ul style={{ listStyle: "none" }}>
           {data.todos.map((todo) => (
             <li key={todo.id}>
-              {todo.title}{" "}
+              {todo.title} {todo.toggleComplete ? "Completed" : "Not Completed"}{" "}
+              {"  "}
               <button onClick={() => dispatch(deleteTodo(todo.id))}>
                 Delete
               </button>
-              <button onClick={() => dispatch(toggleComplete(todo.id))}>
+              <button onClick={() => dispatch(toggleComplete(todo))}>
                 Toggle
               </button>
-              <button onClick={() => dispatch()}>Edit</button>
+              <button onClick={() => handleEdit(todo)}>Edit</button>
             </li>
           ))}
         </ul>
