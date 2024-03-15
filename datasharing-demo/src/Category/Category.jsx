@@ -7,9 +7,7 @@ export default function Category() {
   let [filtered, setFiltered] = useState("");
 
   const getCategory = async () => {
-    let response = await fetch(
-      "https://dummyjson.com/products/categories?limit=0"
-    );
+    let response = await fetch("https://dummyjson.com/products/categories");
     let data = await response.json();
     console.log(data);
     setCategories(data);

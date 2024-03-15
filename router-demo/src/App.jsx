@@ -54,6 +54,9 @@ function App() {
                   <Link to="/products">Products</Link>
                 </li>
                 <li>
+                  <Link to={"/cart"}>Cart (0)</Link>
+                </li>
+                <li>
                   <Link to="/logout">Logout</Link>
                 </li>
               </>
