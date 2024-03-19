@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./cartreducers";
 
 function Product() {

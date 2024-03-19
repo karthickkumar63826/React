@@ -3,7 +3,7 @@ let initialState = {
   cart: [],
   cartIndex: 0,
 };
-
+ 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
