@@ -3,7 +3,7 @@ import {
   combineReducers,
   legacy_createStore as createStore,
 } from "redux";
-import { postsReducer } from "./reducers";
+import { postsReducer } from "./Thunkexample1/reducers";
 import { thunk } from "redux-thunk";
 
 const rootReducer = combineReducers({

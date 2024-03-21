@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import { useEffect } from "react";
-import { fetchPosts } from "./action";
+import { fetchPosts } from "./Thunkexample1/action";
 
 function App() {
   const dispatch = useDispatch();
