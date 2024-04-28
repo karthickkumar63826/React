@@ -93,9 +93,9 @@ function App() {
       <Box color="red" text="Box 1"></Box>
       <Box color="green" text="Box 2"></Box>
       <Box color="yellow" text="Box 3"></Box> 
-      <ProductCard product = {product}></ProductCard>*/}
+      <ProductCard product = {product}></ProductCard>
 
-      {/* <Search onSearch={handleSearch}></Search>
+       <Search onSearch={handleSearch}></Search>
       <div
         style={{
           display: "flex",
@@ -105,23 +105,23 @@ function App() {
         {filtered.map((product) => {
           return <ProductCard key={product.id} product={product}></ProductCard>;
         })}
-      </div> */}
-      {/* <ThemeProvider>
+      </div>
+       <ThemeProvider>
         <Content></Content>
       </ThemeProvider>
-      <ConditionalRenderingDemo/> */}
+      <ConditionalRenderingDemo/> 
 
-      {/* <AuthProvider>
+       <AuthProvider>
         <div>
           <h1>Authentication Example</h1>
           <Login />
           <Logout />
         </div>
-      </AuthProvider> */}
-      {/* <MemoDemo/> */}
-      {/* <MemoDemo2 /> */}
-      {/* <MemoDemo3 />
-      <MemoDemo4 /> */}
+      </AuthProvider> 
+       <MemoDemo/> 
+       <MemoDemo2 /> 
+       <MemoDemo3 />
+      <MemoDemo4 />  */}
     </>
   );
 }
